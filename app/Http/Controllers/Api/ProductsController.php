@@ -24,4 +24,11 @@ class ProductsController extends Controller
 
         return response()->json($product);
     }
+
+    public function barcode(Request $request){
+        $product = Product::with([
+            'typeCupon'])->whereIn('barcode', $request->barcode)->get();
+
+        return response()->json($product);
+    }
 }

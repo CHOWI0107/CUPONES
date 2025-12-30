@@ -34,6 +34,7 @@ Route::get('cupones/{cupon}',          [CuponesController::class, 'show']);
 Route::get('products',                 [ProductsController::class, 'index']);
 Route::get('products/{product}',       [ProductsController::class, 'show']);
 Route::post('products/detalle',        [ProductsController::class, 'Body']);
+Route::post('products/barcode',        [ProductsController::class, 'barcode']);
 
 Route::get('roles',                    [RolesController::class, 'index']);
 Route::get('roles/{rol}',              [RolesController::class, 'show']);

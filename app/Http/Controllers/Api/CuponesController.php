@@ -26,7 +26,7 @@ class CuponesController extends Controller
             'store',
             'storeFrom',
             'typeCupon',
-            'user'])->whereIn('id', $request->cupones)->get();
+            'creadoPor'])->whereIn('id', $request->cupones)->get();
 
         return response()->json($cupon);
     }
